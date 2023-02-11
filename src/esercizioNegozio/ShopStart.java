@@ -24,9 +24,9 @@ public class ShopStart {
         inventory.addProducts(r2);
         inventory.addProducts(r3);
         inventory.countDropRacketsHigherPrice();
-        System.out.println("Nell'inventario ci sono: " +inventory.countProducts() + "prodotti.");
+        System.out.println("Nell'inventario ci sono: " +inventory.countProducts() + " prodotti.");
         System.out.println("Il peso totale dei prodotti nel mio inventario é "+ inventory.sumWeight()+ "grammi");
         System.out.println("Il prodotto più costoso nel mio inventario è: " + inventory.whichHigherCost());
-        System.out.println("Ci sono: " + inventory.countFantasyBooks() + "libri Fantasy");
+        System.out.println("Ci sono: " + inventory.countFantasyBooks() + " libri Fantasy");
     }
 }

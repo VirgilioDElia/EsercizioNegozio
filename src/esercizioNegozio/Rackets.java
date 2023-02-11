@@ -10,9 +10,11 @@ public class Rackets extends Products {
         this.type = type;
     }
     public String getBrand() {
+
         return brand;
     }
     public String getType() {
+
         return type;
     }
 

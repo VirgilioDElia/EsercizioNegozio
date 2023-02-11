@@ -1,4 +1,7 @@
 package esercizioNegozio;
+import esercizioNegozio.Rackets;
+import esercizioNegozio.Rackets;
+import esercizioNegozio.Rackets;
 import java.util.ArrayList;
 public class Shop {
     private ArrayList<Products> inventory;
@@ -32,14 +35,25 @@ public class Shop {
         }
         return numberFantasyBook;
     }
-    public Products whichHigherCost(){
+    public String whichHigherCost() {
         Products higherCost = inventory.get(0);
-        for(int i = 1; i < inventory.size(); i++){
-            if(inventory.get(i).getCost() > higherCost.getCost()){
+        for (int i = 1; i < inventory.size(); i++) {
+            if (inventory.get(i).getCost() > higherCost.getCost()) {
                 higherCost = inventory.get(i);
             }
+            if (higherCost instanceof Book) {
+                Book higherBook = (Book) higherCost;
+                return higherBook.getBookTitle();
+            } else if (higherCost instanceof DVD) {
+                DVD higherDVD = (DVD) higherCost;
+                return higherDVD.getDVDTitle();
+            } else {
+                Rackets higherracket = (Rackets) higherCost;
+                return higherracket.getBrand();
+            }
         }
-        return higherCost;
+
+        return null;
     }
     public void countDropRacketsHigherPrice(){
         for(Products p : inventory){

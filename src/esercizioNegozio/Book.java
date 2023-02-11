@@ -16,7 +16,7 @@ public class Book extends Products {
     public String getISBN(){
         return ISBN;
     }
-    public String getTitle(){
+    public String getBookTitle(){
         return title;
     }
     public String getCategory(){

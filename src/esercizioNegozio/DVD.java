@@ -12,7 +12,7 @@ public class DVD extends Products {
         this.category = category;
         this.duration = duration;
     }
-    public String getTitle() {
+    public String getDVDTitle() {
         return title;
     }
     public String getCategory() {
